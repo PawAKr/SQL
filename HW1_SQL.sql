@@ -25,4 +25,36 @@
 
 6) Для каждого производителя, выпускающего ПК-блокноты c объёмом жесткого диска не менее 10 Гбайт, найти скорости таких ПК-блокнотов. Вывод: производитель, скорость.
 
-      
+7)
+8)
+
+9) Найти производителей ПК с процессором не менее 450 МГц. Вывести :maker
+
+    Select DISTINCT product.maker from product
+    inner join pc on product.model = pc.model
+    where speed >= 450
+
+10)
+
+11) НАйдите среднюю скорость ПК
+
+    Select avg(speed) from pc
+
+12) Найдите среднюю скорость ПК-блокнотов,цены которых превышают 1000
+
+    Select avg(speed) as AVG_speed from laptop
+    where price > 1000 
+
+13) Найдите среднюю скорость ПК, выпущенных производителем A
+    
+    Select avg(speed) as AVG_speed from pc
+    join product on pc.model = product.model
+    where maker = 'A'
+
+14) Найдите класс, имя и страну для кораблей из таблицы Ships, имеющих не менее 10 орудий
+
+    
+    
+
+
+
