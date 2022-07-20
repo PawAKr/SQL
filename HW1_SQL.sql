@@ -53,7 +53,19 @@
 
 14) Найдите класс, имя и страну для кораблей из таблицы Ships, имеющих не менее 10 орудий
 
-    
+   select ships.class, name, country from ships
+   join classes on ships.class = classes.class
+   where numGuns >= 10
+
+15) Найдите размеры жестких дисков совпадающие у двух или более PC.Вывести:HD
+
+   
+17) Для каждого производителя, имеющего модели в таблице Laptop, найдите средний размер экрана выпускаемых им ПК-блокнотов.
+Вывести: maker, средний размер экрана.
+
+   Select maker, avg(screen) as avg_screen from laptop
+   join product on product.model = laptop.model
+   Group by maker
     
 
 
