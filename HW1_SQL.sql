@@ -66,6 +66,14 @@
    Select maker, avg(screen) as avg_screen from laptop
    join product on product.model = laptop.model
    Group by maker
+
+21) Найдите максимальную цену ПК, выпускаемых каждым производителем, у которого     есть модели в таблице PC.
+    Вывести: maker, максимальная цена.
+
+   select maker, MAX(price) as max_price from pc
+   join product on pc.model = product.model
+   group by maker
+
     
 
 
