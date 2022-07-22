@@ -34,7 +34,11 @@
     inner join pc on product.model = pc.model
     where speed >= 450
 
-10)
+10) Найдите модели принтеров, имеющих самую высокую цену. Вывести: model, price
+
+    SELECT model, price  
+    FROM Printer  
+    WHERE price = ( SELECT MAX(price) FROM Printer)
 
 11) НАйдите среднюю скорость ПК
 
